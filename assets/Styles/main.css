@@ -1,0 +1,381 @@
+@font-face {
+    font-family: ttNorms;
+    src: url(/assets/Fonts/TTNorms-Regular.woff2);
+}
+
+@font-face {
+    font-family: blackSWord;
+    src: url(/assets/Fonts/Blacksword.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: ttNorms;
+    font-size: 1rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: max-content;
+    gap: 5rem;
+    color: #28282b;
+    --orange-color: #ed944d;
+}
+
+.header-section{
+    grid-column: 1/-1;
+    height: 80vh;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    justify-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #4d4c4c4f, rgba(0, 0, 0, 0.7)), 
+    url(/assets/Images/fried-chicken-header-section.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fdfbf8;
+}
+
+.header-section .header1{
+    font-size: 1.875rem;
+}
+
+.header-section .header2{
+    font-size: 2.5rem;
+}
+
+.header-section .header2 .header2-span{
+    color: var(--orange-color);
+}
+
+.header-section .header-btn{
+    padding: 1rem 1.5rem;
+    border-radius: .3125rem;
+    color: #fdfbf8;
+    font-size: .875rem;
+    letter-spacing: .1rem;
+    border: .13rem solid var(--orange-color);
+    background-color: var(--orange-color);
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.header-section .header-btn:hover{
+    background-color: transparent;
+}
+
+
+/* STORY TERYTORY */
+.story-section{
+    grid-column: 1/-1;
+    display: grid;
+    gap: 2rem;
+}
+
+.title{
+    display: grid;
+    grid-template-columns: 10rem auto 10rem;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.title::before,
+.title::after{
+    content: " ";
+    display: block;
+    border-bottom: .15rem solid var(--orange-color);
+}
+
+.story-section .story-img-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem; 
+    padding: 0 .75rem;
+    justify-items: center;
+    justify-content: center;
+}
+
+.story-section .story-img-wrapper .story-img{
+    max-width: 20rem;
+    border-radius: .75rem;
+}
+
+/* SERVICE TERYTORY */
+.service-section{
+    grid-column: 1/7;
+    display: grid;
+    gap: 2rem;
+}
+
+.service-section .service-img-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, max-content));
+    grid-template-rows: repeat(2, max-content);
+    grid-auto-rows: max-content;
+    gap: 2rem;
+    padding: 0 .75rem;
+    justify-items: center;
+    justify-content: center;
+}
+
+.service-section .service-img-wrapper .service-card{
+    display: grid;
+    gap: .5rem;
+    justify-items: center;
+}
+
+.service-section .service-img-wrapper .service-card .service-img{
+    max-width: 22rem;
+    border-bottom-left-radius: 3.5rem;
+    border-top-right-radius: 3.5rem;
+}
+
+/* RESERVE TERYTORY */
+.reserve-section{
+    grid-column: 1/-1;
+    display: grid;
+    gap: 2rem;
+}
+
+.reserve-bg-img{
+    background-image: url(/assets/Images/reserve-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+}
+
+.reserve-bg-img .reserve-wrapper{
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.reserve-bg-img .reserve-wrapper .branch-side{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fdfbf8;
+    padding: 2rem;
+    display: grid;
+    justify-items: center;
+    gap: 4rem;
+}
+
+.reserve-bg-img .reserve-wrapper .branch-side .branch-wrapper{
+    text-align: center;
+}
+
+.branch-font{
+    font-family: blackSWord;
+    color: var(--orange-color);
+}
+
+.reserve-bg-img .reserve-wrapper .branch-side .branch-items{
+    list-style-type: none;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.reserve-bg-img .reserve-wrapper .branch-side .branch-quote{
+    text-align: center;
+}
+
+.reserve-bg-img .reserve-wrapper .info-side{
+    background-color: #fdfbf8c4;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.reserve-bg-img .reserve-wrapper .info-side .info-img-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(18rem, 1fr));
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.reserve-bg-img .reserve-wrapper .info-side .info-img-wrapper .info-img{
+    max-width: 7rem;
+    border-radius: 50%;
+}
+
+/* GALLERY TERYTORY */
+.gallery-section{
+    grid-column: 1/-1;
+    display: grid;
+    gap: 2rem; 
+}
+
+.gallery-images-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 20rem);
+    grid-auto-rows: 20rem;
+    grid-template-areas: 
+        "h h v"
+        "e s v"
+        "e o o";
+    gap: 1rem;
+    padding: 0 5rem;
+}
+
+.gallery-img{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    border: .2rem solid #000;
+}
+
+.gallery1{
+    background-image: url(/assets/Images/galler-img1-s.jpg);
+    grid-area: s;
+}
+
+.gallery2{
+    background-image: url(/assets/Images/gallery-img2-h.jpg);
+    grid-area: h;
+}
+
+.gallery3{
+    background-image: url(/assets/Images/gallery-img3-h.jpg);
+    grid-area: o;
+}
+
+.gallery4{
+    background-image: url(/assets/Images/gallery-img4-v.jpg);
+    grid-area: v;
+}
+
+.gallery5{
+    background-image: url(/assets/Images/gallery-img5-v.jpg);
+    grid-area: e;
+}
+
+.footer-section{
+    grid-column: 1/-1;
+    border-top: .1rem solid #000;
+    background-color: rgba(153, 153, 153, 0.3);
+}
+
+.footer-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2rem;
+    padding: 3rem 5rem;
+    text-align: center;
+}
+
+.footer-wrapper .part{
+    display: grid;
+    gap: 1rem;
+}
+
+.item-title{
+    color: #df6400;
+}
+
+.items{
+    list-style-type: none;
+    line-height: 1.75rem;
+}
+
+.footer-subtitle{
+    text-align: center;
+    padding: .5rem;
+}
+
+.footer-subtitle span{
+    color: #df6400;
+}
+
+/* MEDIA QUERIES TERYTORY */
+@media only screen and (max-width: 1416px) {
+    .story-section .story-img-wrapper .story-img:nth-child(4){
+        grid-column: 2/3;
+    }
+
+    .reserve-bg-img .reserve-wrapper .info-side .info-img-wrapper{
+        grid-template-columns: repeat(3, minmax(15rem, 1fr));
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .reserve-bg-img .reserve-wrapper .info-side .info-img-wrapper{
+        grid-template-columns: repeat(3, minmax(12rem, 1fr));
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .reserve-bg-img .reserve-wrapper .info-side .info-img-wrapper{
+        grid-template-columns: repeat(3, minmax(7rem, 1fr));
+    }
+
+    .reserve-bg-img .reserve-wrapper .info-side .info-img-wrapper .info-img{
+        max-width: 6rem;
+    }
+
+    .gallery-images-wrapper{
+        grid-template-areas: 
+            "h h h"
+            "v v v"
+            "e e e"
+            "o o o"
+            "s s s";
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .story-section .story-img-wrapper .story-img:nth-child(4){
+        grid-column: auto;
+    }
+
+    .reserve-bg-img .reserve-wrapper .info-side .info-img-wrapper{
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+        gap: 2rem;
+    }
+
+    .footer-wrapper{
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .header-section{
+        background-position-x: 80%;
+    }
+
+    .header-section .header-btn{
+        padding: .8rem 1.2rem;
+        font-size: .85rem;
+    }
+    
+    .title{
+        grid-template-columns: 5rem auto 5rem;
+    }
+
+    .reserve-bg-img .reserve-wrapper .info-side .info-img-wrapper{
+        grid-template-columns: repeat(auto-fit, 1fr);
+    }
+
+    .reserve-bg-img .reserve-wrapper{
+        grid-template-columns: max-content;
+    }
+}
